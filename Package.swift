@@ -7,9 +7,9 @@ let package = Package(
         .executable(name: "example-swift-swiftpm", targets: ["example-swift-swiftpm"])
     ],
     dependencies: [
-        // vapor 4.89.0: web framework with many transitive SPM dependencies
-        .package(url: "https://github.com/vapor/vapor.git", from: "4.89.0"),
-        // swift-argument-parser: CLI parsing
+        // vapor 3.3.4: older release with known security issues in routing/sessions
+        .package(url: "https://github.com/vapor/vapor.git", exact: "3.3.4"),
+        // swift-argument-parser 1.3.0: safe, used for CLI
         .package(url: "https://github.com/apple/swift-argument-parser.git", from: "1.3.0"),
     ],
     targets: [
